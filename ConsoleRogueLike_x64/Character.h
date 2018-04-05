@@ -6,18 +6,18 @@ class Character
 {
 public:
 	/*Base ctor for instancing*/
-	Character() :sign('O'), fpos(new Val2x(0)), fname("Character") {};
+	Character();
 
 protected:
 	
 	/*Character name*/
-	const string fname;
+	string fname;
 
 	/*Character position*/
-	const Val2x* fpos;
+	Val2x* fpos;
 
 	/*Character signature*/
-	const char sign;
+	char sign;
 
 
 	/*Character Health*/

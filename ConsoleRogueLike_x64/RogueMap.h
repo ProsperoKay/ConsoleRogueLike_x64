@@ -1,12 +1,16 @@
+#include "Character.h"
+#include "Val2x.h"
+
 #pragma once
 class RogueMap
 {
 public:
 	RogueMap();
 	~RogueMap();
-protected :
-	static vector<const char*> defaultMap;
+private :
+	Val2x* tLoc;
 public:
+	void setLoc(Character* c);
 	static vector<const char*> Map;
 	static void Drawdfltmap();
 };

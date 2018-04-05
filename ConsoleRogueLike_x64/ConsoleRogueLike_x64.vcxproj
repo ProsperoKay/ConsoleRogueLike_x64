@@ -156,6 +156,7 @@
     <ClInclude Include="RogueMap.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Val2x.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleRogueLike_x64.cpp" />

@@ -1,19 +1,48 @@
 #pragma once
 #include "stdafx.h"
+#include "Val2x.h"
 
 class Character
 {
-protected:
-	string name;
-	float health;
-	float attack;
-	float experience;
-	float speed;
-	int position[2];
+public:
+	/*Base ctor for instancing*/
+	Character() :sign('O'), fpos(new Val2x(0)), fname("Character") {};
 
-private:
-	virtual void damage()=0;
-	virtual void damaged()=0;
-	virtual void move()=0;
+protected:
+	
+	/*Character name*/
+	const string fname;
+
+	/*Character position*/
+	const Val2x* fpos;
+
+	/*Character signature*/
+	const char sign;
+
+
+	/*Character Health*/
+	float fhealth;
+	
+	/*Character Attack*/
+	float fattack;
+
+	/*Character Experience*/
+	float fexperience;
+
+	/*Character Speed*/
+	float fspeed;
+
+
+	/*Character apply damage*/
+	virtual void damage(string ch) = 0;
+
+	/*Character damage*/
+	virtual void damaged(float f) = 0;
+
+	/*Character movement*/
+	virtual void move(enum Direction dir) = 0;
+
 };
 
+/*Motion Direction*/
+enum Direction { UP, DOWN, LEFT, RIGHT, STOP };

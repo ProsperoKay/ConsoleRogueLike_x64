@@ -3,10 +3,6 @@
 
 class Character
 {
-public:
-	Character() :name("Character"), health(0.0f), attack(0.0f), experience(0.0f), speed(0.0f) {};
-	virtual ~Character()=0 { }
-
 protected:
 	string name;
 	float health;
@@ -15,9 +11,9 @@ protected:
 	float speed;
 	int position[2];
 
-public:
-	void damage();
-	virtual void damaged();
-	virtual void move();
+private:
+	virtual void damage()=0;
+	virtual void damaged()=0;
+	virtual void move()=0;
 };
 

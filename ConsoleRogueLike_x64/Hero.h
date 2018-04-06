@@ -25,6 +25,7 @@ public:
 	/*Get Hero Health*/
 	float getH();
 
-	friend void RogueMap::setLoc(Hero* ch);
+	/*Get signature*/
+	char signf();
 };
 

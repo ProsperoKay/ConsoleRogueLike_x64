@@ -60,3 +60,8 @@ float Hero::getH()
 {
 	return fhealth;
 }
+
+char Hero::signf()
+{
+	return this->sign;
+}

@@ -8,10 +8,6 @@ RogueMap::RogueMap()
 	return;
 }
 
-RogueMap::~RogueMap()
-{
-}
-
 void RogueMap::setLoc(Character * ch)
 {
 	return;
@@ -24,7 +20,7 @@ void RogueMap::setLoc(Hero* ch)
 	const int x = p->x;
 	const int y = p->y;
 
-	Map[y][x] = sign;
+	Map[y][x] = ch->signf();
 }
 
 void RogueMap::setLoc(Enemy* ch)

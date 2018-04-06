@@ -95,3 +95,8 @@ float Enemy::speedf()
 {
 	return this->fspeed;
 }
+
+char Enemy::signf()
+{
+	return this->sign;
+}

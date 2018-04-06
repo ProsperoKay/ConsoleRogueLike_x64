@@ -43,5 +43,7 @@ public:
 	/*Get Speed*/
 	float speedf();
 
+	/*Get signature*/
+	char signf();
 };
 

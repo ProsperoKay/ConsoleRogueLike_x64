@@ -35,7 +35,7 @@ protected:
 
 
 	/*Get Character Position*/
-	virtual Val2x getFPos() = 0;
+	virtual Val2x* getFPos() = 0;
 
 	/*Character damage*/
 	virtual void damaged(float f) = 0;

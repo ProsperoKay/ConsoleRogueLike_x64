@@ -16,9 +16,9 @@ Hero::Hero(string ch, Val2x * v, char s)
 	this->sign = s;
 }
 
-Val2x Hero::getFPos()
+Val2x* Hero::getFPos()
 {
-	return *(this->fpos);
+	return this->fpos;
 }
 
 void Hero::damaged(float f)
@@ -31,28 +31,29 @@ void Hero::move(Direction dir)
 	switch (dir) {
 
 	case UP:
-		this->fpos->y - 1;
+		this->fpos->y -= 1;
 		break;
 
 	case DOWN:
-		this->fpos->y + 1;
+		this->fpos->y += 1;
 		break;
 
 	case LEFT:
-		this->fpos->x - 1;
+		this->fpos->x -= 1;
 		break;
 
 	case RIGHT:
-		this->fpos->x + 1;
+		this->fpos->x += 1;
 		break;
 	case STOP:
-		this->fpos->x - 1;
-		this->fpos->y - 1;
+		this->fpos->x -= 1;
+		this->fpos->y -= 1;
 		break;
 		;
 	default:
 		break;
 	}
+
 }
 
 float Hero::getH()

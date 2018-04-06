@@ -1,5 +1,6 @@
 #pragma once
 #include "Character.h"
+#include "RogueMap.h"
 
 class Hero :public Character
 {
@@ -13,7 +14,7 @@ public:
 
 
 	/*@Override : Get Character Position*/
-	Val2x getFPos();
+	Val2x* getFPos();
 
 	/*@Override : Character damage*/
 	void damaged(float f);
@@ -23,5 +24,7 @@ public:
 	
 	/*Get Hero Health*/
 	float getH();
+
+	friend void RogueMap::setLoc(Hero* ch);
 };
 

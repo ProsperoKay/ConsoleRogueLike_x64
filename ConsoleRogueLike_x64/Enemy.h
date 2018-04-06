@@ -13,7 +13,7 @@ public:
 
 
 	/*@Override : Get Character Position*/
-	Val2x getFPos();
+	Val2x* getFPos();
 
 	/*@Override : Character damage*/
 	void damaged(float f);

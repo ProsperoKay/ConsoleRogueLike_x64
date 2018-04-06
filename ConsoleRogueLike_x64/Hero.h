@@ -1,37 +1,27 @@
 #pragma once
 #include "Character.h"
-#include "Val2x.h"
 
 class Hero :public Character
 {
 
 public:
 
-	/*ctor*/
+	/**ctor*/
 	Hero();
+	/**Functional ctor*/
+	Hero(string ch, Val2x* v, char s);
 
-	/*@Override : Character apply damage*/
-	void damage(string ch);
+
+	/*@Override : Get Character Position*/
+	Val2x getFPos();
 
 	/*@Override : Character damage*/
 	void damaged(float f);
 
 	/*@Override : Character movement*/
 	void move(enum Direction dir);
-
-private:
-
-	/*Set Health*/
-	void healthf(float);
-
-	/*Set Attack*/
-	void attackf(float);
 	
-	/*Set XP*/
-	void experiencef(float);
-	
-	/*Set Speed*/
-	void speedf(float);
-
+	/*Get Hero Health*/
+	float getH();
 };
 

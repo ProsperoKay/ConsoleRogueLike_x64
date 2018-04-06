@@ -9,7 +9,11 @@ RogueMap::~RogueMap()
 {
 }
 
-void RogueMap::setLoc(Character* c)
+void RogueMap::setLoc(Character * ch)
 {
-	
+	return;
+}
+
+void RogueMap::setLoc(Hero ch)
+{
 }

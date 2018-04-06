@@ -1,4 +1,5 @@
 #include "Character.h"
+#include "Hero.h"
 #include "Val2x.h"
 
 #pragma once
@@ -8,10 +9,11 @@ public:
 	RogueMap();
 	~RogueMap();
 private :
-	Val2x* tLoc;
+	Val2x* hLoc;
 public:
-	void setLoc(Character* c);
-	static vector<const char*> Map;
-	static void Drawdfltmap();
+	void setLoc(Character* ch);
+	void setLoc(Hero ch);
+
+	vector<const char*> Map;
 };
 

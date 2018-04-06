@@ -2,11 +2,12 @@
 #include "stdafx.h"
 #include "Val2x.h"
 
+
 class Character
 {
 public:
 	/*Base ctor for instancing*/
-	Character();
+	Character() :fname("char"), fpos(new Val2x(0)), sign('O'){};
 
 protected:
 	
@@ -33,8 +34,8 @@ protected:
 	float fspeed;
 
 
-	/*Character apply damage*/
-	virtual void damage(string ch) = 0;
+	/*Get Character Position*/
+	virtual Val2x getFPos() = 0;
 
 	/*Character damage*/
 	virtual void damaged(float f) = 0;
